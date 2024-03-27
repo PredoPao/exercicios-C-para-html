@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input[type="text"], input[type="number"] {
+            padding: 8px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #output {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Digite os dados do competidor:</h2>
+    <input type="text" id="codeInput" placeholder="Código"><br>
+    <input type="number" id="ageInput" placeholder="Idade"><br>
+    <input type="number" id="heightInput" placeholder="Altura"><br>
+    <input type="number" id="weightInput" placeholder="Peso"><br>
+    <button onclick="displayData()">Enviar</button>
+    <div id="output"></div>
+    <img src="Screenshot_1.png" alt="">
+    <script>
+        function displayData() {
+            var code = document.getElementById('codeInput').value;
+            var age = document.getElementById('ageInput').value;
+            var height = document.getElementById('heightInput').value;
+            var weight = document.getElementById('weightInput').value;
+
+            document.getElementById('output').textContent = "O competidor " + code + ", tem " + age + " anos, pesa " + weight + " Kg e tem " + height + " de altura.";
+        }
+    </script>
+</body>
+</html>

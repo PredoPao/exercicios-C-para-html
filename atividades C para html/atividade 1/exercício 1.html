@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input[type="number"] {
+            padding: 8px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #output {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Digite a idade do aluno:</h2>
+    <input type="number" id="ageInput">
+    <button onclick="displayAge()">Enviar</button>
+    <div id="output"></div>
+    <img src="Screenshot_1.png" alt="">
+
+    <script>
+        function displayAge() {
+            var age = document.getElementById('ageInput').value;
+            document.getElementById('output').textContent = "A idade informada foi: " + age;
+        }
+    </script>
+</body>
+</html>

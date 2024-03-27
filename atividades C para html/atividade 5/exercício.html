@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo da Área do Círculo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input[type="number"] {
+            padding: 8px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #output {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Cálculo da Área do Círculo</h2>
+    <label for="raioInput">Informe o raio do círculo:</label><br>
+    <input type="number" id="raioInput" placeholder="Raio"><br>
+    <button onclick="calcularArea()">Calcular</button>
+    <div id="output"></div>
+    <img src="Screenshot_1.png" alt="">
+
+    <script>
+        function calcularArea() {
+            var raio = document.getElementById('raioInput').value;
+            var area = Math.PI * raio * raio;
+
+            document.getElementById('output').textContent = "A área do círculo é: " + area.toFixed(3) + " m²";
+        }
+    </script>
+</body>
+</html>
